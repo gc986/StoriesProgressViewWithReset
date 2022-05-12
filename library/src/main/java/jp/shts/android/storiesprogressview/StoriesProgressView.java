@@ -205,6 +205,11 @@ public class StoriesProgressView extends LinearLayout {
         progressBars.get(0).startProgress();
     }
 
+    public void resetStories(){
+	for (int i = 0; i < progressBars.size(); i++)
+	    progressBars.get(i).setMin();
+    }
+
     /**
      * Start progress animation from specific progress
      */
@@ -239,4 +244,5 @@ public class StoriesProgressView extends LinearLayout {
         if (current < 0) return;
         progressBars.get(current).resumeProgress();
     }
+
 }
